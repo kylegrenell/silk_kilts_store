@@ -31,6 +31,12 @@ class ClothingStore
     return ClothingStore.new(clothing_store)
   end
 
+  def self.all()
+     sql = "SELECT * FROM clothing_stores"
+     clothing_stores = SqlRunner.run(sql).map {|clothing_store| ClothingStore.new(clothing_store)}
+     return clothing_stores
+   end
+
   def edit()
     sql = "UPDATE clothing_stores SET
           name = '#{@name}',

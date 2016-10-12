@@ -11,5 +11,6 @@ type VARCHAR(255)
 CREATE TABLE clothes(
 id SERIAL4 PRIMARY KEY,
 type VARCHAR(255),
-clothing_store_id INT4 REFERENCES clothing_stores(id)
-  );
+clothing_store_id INT4 REFERENCES 
+clothing_stores(id)
+);
